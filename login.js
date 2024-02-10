@@ -7,7 +7,8 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 
     // Simulando una autenticación correcta
     if (username === "usuario" && password === "contraseña") {
-        window.location.href = "../html/reports.html"; // Redirigir al usuario
+        window.location.href = "/aar-tool/public/html/reports.html";
+ // Redirigir al usuario
     } else {
         alert("Usuario o contraseña incorrectos");
     }
