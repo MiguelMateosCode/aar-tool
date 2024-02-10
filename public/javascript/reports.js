@@ -1,4 +1,5 @@
-    function sortTable(n) {
+    document.addEventListener('DOMContentLoaded', function() {
+     function sortTable(n) {
             var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
             table = document.querySelector("table");
             switching = true;
@@ -73,3 +74,7 @@
                }
             }
          });
+
+
+});
+   
