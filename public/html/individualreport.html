@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table with Filter</title>
+  <!-- Agregar la referencia a Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+ <link rel="stylesheet" href="../css/individualreport.css">
+
+</head>
+
+<body>
+  <!-- Contenedor en el centro con medida de 6 columnas -->
+  <div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <img src="https://i.imgur.com/VCVcNoz.png" alt="">
+        <div class="breadcrumbs">
+
+          <a href="/reports.html" class="back-link">❮ Back to Accesibility Report Index</a>
+
+        </div>
+        <h4 class="mt-5">Empresa de Soluciones de Transformación Digital | UST España</h4>
+        <div class="background">
+          <div class="cards-container">
+            <div class="card">
+              <div class="card-number" id="violationsNumber"></div>
+              <div class="card-text"><i class="fas fa-ban text-danger"></i>
+                Violations</div>
+            </div>
+            <div class="card">
+              <div class="card-number" id="needsreviewNumber"></div>
+              <div class="card-text"><i class="fas fa-exclamation-triangle text-warning"></i>
+                Needs Review</div>
+            </div>
+            <div class="card">
+              <div class="card-number" id="recommendationNumber"></div>
+              <div class="card-text"><i class="fas fa-info-circle text-info"></i>
+                Recommendation</div>
+            </div>
+            <div class="card">
+              <div class="card-number" id="allNumber"></div>
+              <div class="card-text">All</div>
+            </div>
+          </div>
+          <p class="mb-0">WCAG 2.2 Quick Guide for specific details on accessibility success criteria. This reference provides practical examples and implementation techniques to ensure inclusion of all users in your web projects. Visit quick reference: <a href="https://www.w3.org/WAI/WCAG22/quickref/">How to Meet WCAG (Quick Reference)</a></p>
+        </div>
+
+        <h6>Analysis data</h6>
+        <div class="wrapper">
+          <p>Report Date: <span>08/02/2024</span></p>
+          <p>Page analyzed: <a href="https://www.ust.com/es" id="urlAnalized">https://www.ust.com/es</a></p>
+          <p>Accessibility expert: Miguel Mateos</p>
+          <p>WCAG Version: 2.2</p>
+          <p>Conformance target: AA</p>
+          <p>Task reference: <a href="https://www.ust.com/es">65238</a></p>
+          <button id="downloadCSV" aria-label="Descargar reporte en CSV" onclick="downloadCSV()" class="button-secondary mr-2">Export CSV</button>
+          <button id="downloadHTML" aria-label="Descargar reporte en HTML" onclick="downloadHTML()" class="button-secondary">Export HTML</button>
+        </div>
+        <h6>All results</h6>
+        <div class=wrapper>
+
+          <label for="filtro" class="mt-0">Sort by</label>
+          <select id="filtro">
+            <option value="">All Issues</option>
+            <option value="Violation">Violation</option>
+            <option value="Recommendation">Recommendation</option>
+            <option value="Needs review">Needs review</option>
+            <!-- Agrega más opciones aquí según sea necesario -->
+          </select>
+          <table>
+            <tbody>
+              <tr class="table-header">
+                <th>Success Criteria</th>
+                <th>Issue</th>
+                <th>Issue type</th>
+              </tr>
+              <tr>
+                <td>1.3.1 Info and Relationships</td>
+                <td>Verify the '::before' and '::after' pseudo-elements do not insert non-decorative content</td>
+                <td>Needs review</td>
+              </tr>
+              <tr>
+                <td>1.4.3 Contrast (Minimum)</td>
+                <td>The foreground text and its background color are both detected as #ffffff. Verify the text meets the WCAG AA requirements for minimum contrast</td>
+                <td>Needs review</td>
+              </tr>
+              <tr>
+                <td>1.4.3 Contrast (Minimum)</td>
+                <td>The foreground text and its background color are both detected as #ffffff. Verify the text meets the WCAG AA requirements for minimum contrast</td>
+                <td>Needs review</td>
+              </tr>
+              <tr>
+                <td>2.4.7 Focus Visible</td>
+                <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+                <td>Needs review</td>
+              </tr>
+              <tr>
+                <td>2.4.7 Focus Visible</td>
+                <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+                <td>Needs review</td>
+              </tr>
+              <tr>
+                <td>2.4.7 Focus Visible</td>
+                <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+                <td>Needs review</td>
+              </tr>
+              <tr>
+                <td>1.1.1 Non-text Content</td>
+                <td>Verify important background image information has a text alternative in system high contrast mode</td>
+                <td>Recommendation</td>
+              </tr>
+              <tr>
+                <td>3.2.2 On Input</td>
+                <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+                <td>Recommendation</td>
+              </tr>
+              <tr>
+                <td>3.2.2 On Input</td>
+                <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+                <td>Recommendation</td>
+              </tr>
+              <tr>
+                <td>3.2.2 On Input</td>
+                <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+                <td>Recommendation</td>
+              </tr>
+              <tr>
+                <td>3.2.2 On Input</td>
+                <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+                <td>Recommendation</td>
+              </tr>
+              <tr>
+                <td>3.2.2 On Input</td>
+                <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+                <td>Recommendation</td>
+              </tr>
+              <tr>
+                <td>3.2.2 On Input</td>
+                <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+                <td>Recommendation</td>
+              </tr>
+              <tr>
+                <td>3.2.2 On Input</td>
+                <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+                <td>Recommendation</td>
+              </tr>
+              <tr>
+                <td>3.2.2 On Input</td>
+                <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+                <td>Recommendation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agregar la referencia a Bootstrap JS (opcional) -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.ajs"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../javascript/individualreport.js"></script>
+
+</body>
+
+</html>
