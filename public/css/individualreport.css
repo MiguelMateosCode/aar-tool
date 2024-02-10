@@ -49,7 +49,7 @@ h4 {
   font-size: 24px;
   line-height: 32px;
   font-weight: 500;
-  margin-bottom: 32px !important;
+  margin: 32px 0px !important;
 }
 
 /* Tablas */
@@ -127,8 +127,6 @@ img {
 /* Migas de pan */
 .breadcrumbs {
   font-size: 16px;
-  padding: 16px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .breadcrumbs a {
