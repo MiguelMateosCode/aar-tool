@@ -1,7 +1,7 @@
 /* Estilos generales */
 body,
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif; sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #1c242c;
@@ -11,12 +11,14 @@ p {
 .back-link {
   color: #1c242c !important;
   text-decoration: none !important;
+ cursor: pointer; /* Cambia el cursor a mano al pasar el ratón */
 }
 
 .back-link:hover {
   text-decoration: underline !important;
   text-decoration-thickness: 3px !important;
   color: #1c242c !important;
+  text-underline-offset: 0.25em !important;
 }
 
 a {
@@ -37,7 +39,7 @@ a:focus,
 a:active {
   outline: 0;
   color: #0b0c0c !important;
-  background-color: rgba(0, 123, 255, 0.25);
+  /*background-color: rgba(0, 123, 255, 0.25);*/
   box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.5);
   text-decoration: none;
   -webkit-box-decoration-break: clone;
@@ -45,13 +47,17 @@ a:active {
 }
 
 /* Encabezados */
-h4 {
-  font-size: 24px;
+h1 {
+  font-size: 1.75rem !important;
   line-height: 32px;
-  font-weight: 500;
+  font-weight: 400 !important;
   margin: 32px 0px !important;
 }
-
+h2{
+  font-size: 1.25rem !important;;
+  line-height: 32px !important;
+  font-weight: bold !important;
+}
 /* Tablas */
 table {
   margin: 16px 0px;
@@ -199,19 +205,18 @@ img {
 }
 
 .card-number {
-  font-size: 48px;
-  font-weight: 300;
+  font-size: 54px;
+  font-weight: 400;
   color: #1c242c;
 }
 
 .card-text {
-  margin-top: 10px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 0.875rem;
-  color: #006e74;
+  font-size: 12px;
+  color: #1c242c;
 }
 
 @media (max-width: 768px) {
@@ -256,4 +261,8 @@ label {
   color: #0b0c0c;
   display: block !important;
   margin-bottom: 8px;
+}
+
+.icon-check-success {
+    color: #28a745; /* Un verde accesible para el ícono de verificación */
 }
