@@ -17,8 +17,9 @@ p {
 .back-link:hover {
   text-decoration: underline !important;
   text-decoration-thickness: 3px !important;
-  color: #1c242c !important;
+  color: #003078 !important;
   text-underline-offset: 0.25em !important;
+
 }
 
 .back-link-index {
