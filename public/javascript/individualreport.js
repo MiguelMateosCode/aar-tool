@@ -80,23 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
       var hrefToCopy = this.getAttribute("href");
       navigator.clipboard
         .writeText(hrefToCopy)
-        .then(function () {
-          // Opcional: Mostrar alguna notificación de que el href fue copiado
-          console.log("Href copiado al portapapeles: " + hrefToCopy);
-
-          // Cambiar temporalmente el texto y el ícono del enlace para indicar éxito
-          element.innerHTML =
-            '<i class="fas fa-check icon-check-success"></i> ¡Enlace copiado al portapapeles!';
-
-          // Volver al estado original después de 2 segundos
-          setTimeout(function () {
-            element.innerHTML =
-              '<i class="far fa-copy text-black"></i> Copy to clipboard';
-          }, 2000);
-        })
-        .catch(function (error) {
-          console.error("Error al copiar el href: ", error);
-        });
     });
   });
 });
