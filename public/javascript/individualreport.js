@@ -71,7 +71,7 @@ filtroSelect.addEventListener("change", function () {
 
 //////////////
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".back-link").forEach(function (element) {
+  document.querySelectorAll(".copy-to-clipboard").forEach(function (element) {
     element.addEventListener("click", function (event) {
       // Prevenir el comportamiento predeterminado para no navegar
       event.preventDefault();
