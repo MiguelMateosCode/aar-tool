@@ -17,18 +17,18 @@ p {
 .back-link:hover {
   text-decoration: underline !important;
   text-decoration-thickness: 3px !important;
-  color: #003078 !important;
+  color: #1c242c !important;
   text-underline-offset: 0.25em !important;
 
 }
 
-.back-link-index {
+.copy-to-clipboard {
   color: #1c242c !important;
   text-decoration: none !important;
  cursor: pointer; /* Cambia el cursor a mano al pasar el ratón */
 }
 
-.back-link-index:hover {
+.copy-to-clipboard:hover {
   text-decoration: underline !important;
   text-decoration-thickness: 3px !important;
   color: #1c242c !important;
