@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UST | Accesibility Report Tool</title>
+  <!-- Agregar la referencia a Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/individualreport.css">
+</head>
+
+<body>
+  <div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <img src="https://i.imgur.com/VCVcNoz.png" alt="">
+        <div class="separator"></div>
+        <div class="breadcrumbs">
+          <a href="reports.html" class="back-link">❮ Back to Accesibility Report Index</a>
+        </div>
+        <!-- REEMPLAZAR DESDE AQUÍ -->
+    <h1 id="pageTitle">Nuestro enfoque | Haz que tu viaje sea nuestro viaje - UST Spain</h1>
+<h2>Summary</h2>
+<div class="background">
+  <div class="cards-container">
+     <div class="card">
+      <div class="card-number mb-2" id="allNumber"></div>
+      <div class="card-text">All Issues</div>
+    </div>
+    <div class="card">
+      <div class="card-number mb-2" id="violationsNumber"></div>
+      <div class="card-text">
+        <i class="fas fa-ban text-danger"></i>Violations
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-number mb-2" id="needsreviewNumber"></div>
+      <div class="card-text">
+        <i class="fas fa-exclamation-triangle text-warning"></i>Needs Review
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-number mb-2" id="recommendationNumber"></div>
+      <div class="card-text">
+        <i class="fas fa-info-circle text-info"></i>Recommendation
+      </div>
+    </div>
+   
+  </div>
+  <p class="mb-0">
+    WCAG 2.2 Quick Guide for specific details on accessibility success criteria.
+    This reference provides practical examples and implementation techniques to
+    ensure inclusion of all users in your web projects. Visit quick reference:
+    <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank"
+      >How to Meet WCAG (Quick Reference)</a
+    >
+  </p>
+</div>
+<h2>Analysis data</h2>
+<div class="wrapper">
+  <p>Report Date: <span id="currentDate">12/02/2024</span></p>
+  <p>
+    Page analyzed:
+    <a target="_blank" href="https://www.ust.com/es/our-approach" id="urlAnalized"
+      >https://www.ust.com/es/our-approach</a
+    >
+  </p>
+  <p>Accessibility expert: Miguel Mateos</p>
+  <p>WCAG Version: 2.2</p>
+  <p>Conformance target: AA</p>
+  <button
+    id="downloadCSV"
+    aria-label="Descargar reporte en CSV"
+    onclick="downloadCSV()"
+    class="button-secondary mr-2"
+  >
+    Export CSV
+  </button>
+  <button
+    id="downloadHTML"
+    aria-label="Descargar reporte en HTML"
+    onclick="downloadHTML()"
+    class="button-secondary"
+  >
+    Export HTML
+  </button>
+</div>
+
+        <!-- HASTA AQUÍ -->
+        <h2>All results</h2>
+        <div class=wrapper>
+          <label for="filtro" class="mt-0">Sort by</label>
+          <select id="filtro">
+            <option value="">All Issues</option>
+            <option value="Violation">Violation</option>
+            <option value="Recommendation">Recommendation</option>
+            <option value="Needs review">Needs review</option>
+          </select>
+          <!-- REEMPLAZAR TABLA DESDE AQUÍ -->
+    <table id="accessibilityTable">
+      <tbody>
+        <tr class="table-header">
+          <th>Success Criteria</th>
+          <th>Issue</th>
+          <th>Issue type</th>
+          <th>Code</th>
+        </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#ustFramework&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#innovationEcosystem&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#ourWork&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#industries&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#ustFramework&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#innovationEcosystem&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#ourWork&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#industries&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<button flag=&quot;true&quot; tabindex=&quot;0&quot; aria-label=&quot;Overview&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-secondary__1ZjTw cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.1.1 Keyboard</td>
+      <td>The scrollable element <div> with non-interactive content is not tabbable</div></td>
+      <td>Violation</td>
+      <td>
+        <a href="<div class=&quot;ust-grid-container_root__3Rdtm aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--10 ust-grid-container_align-center__2Dmwx ust-grid-container_gutters-md__29-rG ust-grid-container_vertical-align-top__jxlo9&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.1.1 Keyboard</td>
+      <td>The scrollable element <div> with non-interactive content is not tabbable</div></td>
+      <td>Violation</td>
+      <td>
+        <a href="<div class=&quot;ust-grid-container_root__3Rdtm aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ust-grid-container_align-left__3P-Tw ust-grid-container_gutters-md__29-rG ust-grid-container_vertical-align-center__3ktl1&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>Text contrast of 3.23 with its background is less than the WCAG AA minimum requirements for text of size 12px and weight of 500</td>
+      <td>Violation</td>
+      <td>
+        <a href="<p>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>Text contrast of 3.23 with its background is less than the WCAG AA minimum requirements for text of size 12px and weight of 500</td>
+      <td>Violation</td>
+      <td>
+        <a href="<p>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>Text contrast of 3.23 with its background is less than the WCAG AA minimum requirements for text of size 12px and weight of 500</td>
+      <td>Violation</td>
+      <td>
+        <a href="<p>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>Text contrast of 3.23 with its background is less than the WCAG AA minimum requirements for text of size 12px and weight of 500</td>
+      <td>Violation</td>
+      <td>
+        <a href="<p>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a rel=&quot;&quot; target=&quot;_self&quot; href=&quot;/es/our-approach/innovation-ecosystem&quot; tabindex=&quot;0&quot; aria-label=&quot;Innovation Ecosystem&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-primary__10-OW cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a rel=&quot;&quot; target=&quot;_self&quot; href=&quot;/es/insights&quot; tabindex=&quot;0&quot; aria-label=&quot;Our Work&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-primary__10-OW cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a class=&quot;ust-projects-grid_content__F49Vg&quot; aria-label=&quot;cta desc&quot; href=&quot;/en/insights/transforming-the-consumer-finance-business&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>Text contrast of 3.49 with its background is less than the WCAG AA minimum requirements for text of size 12px and weight of 700</td>
+      <td>Violation</td>
+      <td>
+        <a href="<h6 class=&quot;ust-heading_root__372Zh ust-heading_h7__2BlqK ust-heading_alignment-left__1UUvl ust-projects-grid_category__x2F9K ust-heading_alignment-left__1UUvl&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a class=&quot;ust-projects-grid_content__F49Vg&quot; aria-label=&quot;cta desc&quot; href=&quot;/en/insights/transforming-the-digital-user-experience&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>Text contrast of 3.49 with its background is less than the WCAG AA minimum requirements for text of size 12px and weight of 700</td>
+      <td>Violation</td>
+      <td>
+        <a href="<h6 class=&quot;ust-heading_root__372Zh ust-heading_h7__2BlqK ust-heading_alignment-left__1UUvl ust-projects-grid_category__x2F9K ust-heading_alignment-left__1UUvl&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a class=&quot;ust-projects-grid_content__F49Vg&quot; aria-label=&quot;cta desc&quot; href=&quot;/en/insights/from-traditional-to-tech-forward&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>Text contrast of 3.49 with its background is less than the WCAG AA minimum requirements for text of size 12px and weight of 700</td>
+      <td>Violation</td>
+      <td>
+        <a href="<h6 class=&quot;ust-heading_root__372Zh ust-heading_h7__2BlqK ust-heading_alignment-left__1UUvl ust-projects-grid_category__x2F9K ust-heading_alignment-left__1UUvl&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.5.3 Label in Name</td>
+      <td>Accessible name does not match or contain the visible label text</td>
+      <td>Violation</td>
+      <td>
+        <a href="<a class=&quot;ust-projects-grid_content__F49Vg&quot; aria-label=&quot;cta desc&quot; href=&quot;/en/insights/making-the-right-call&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>Text contrast of 3.49 with its background is less than the WCAG AA minimum requirements for text of size 12px and weight of 700</td>
+      <td>Violation</td>
+      <td>
+        <a href="<h6 class=&quot;ust-heading_root__372Zh ust-heading_h7__2BlqK ust-heading_alignment-left__1UUvl ust-projects-grid_category__x2F9K ust-heading_alignment-left__1UUvl&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.1.1 Non-text Content</td>
+      <td>Confirm Windows high contrast mode is supported when using CSS to include, position or alter non-decorative content</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<style class=&quot;vjs-styles-defaults&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.3.1 Info and Relationships</td>
+      <td>Verify the '::before' and '::after' pseudo-elements do not insert non-decorative content</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<link type=&quot;text/css&quot; href=&quot;/etc.clientlibs/global/clientlibs/clientlib-base.min.96e70a9db49291c6d80ea2b59e429bb6.css&quot; rel=&quot;stylesheet&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.3.1 Info and Relationships</td>
+      <td>Verify the '::before' and '::after' pseudo-elements do not insert non-decorative content</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<link type=&quot;text/css&quot; href=&quot;/etc.clientlibs/global/clientlibs/clientlib-site.min.5cdeb4a1f2774ab2e52b5ef213826d48.css&quot; rel=&quot;stylesheet&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.1 Use of Color</td>
+      <td>Verify color is not used as the only visual means of conveying information</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<link type=&quot;text/css&quot; href=&quot;/etc.clientlibs/global/clientlibs/clientlib-site.min.5cdeb4a1f2774ab2e52b5ef213826d48.css&quot; rel=&quot;stylesheet&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.3.1 Info and Relationships</td>
+      <td>Verify the '::before' and '::after' pseudo-elements do not insert non-decorative content</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<style id=&quot;onetrust-style&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Confirm the element should be tabbable, and is visible on the screen when it has keyboard focus</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#ustFramework&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Confirm the element should be tabbable, and is visible on the screen when it has keyboard focus</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#innovationEcosystem&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Confirm the element should be tabbable, and is visible on the screen when it has keyboard focus</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#ourWork&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Confirm the element should be tabbable, and is visible on the screen when it has keyboard focus</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a flag=&quot;true&quot; class=&quot;&quot; aria-label=&quot;label desc&quot; href=&quot;#industries&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<button flag=&quot;true&quot; tabindex=&quot;0&quot; aria-label=&quot;Overview&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-secondary__1ZjTw cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.3.1 Info and Relationships</td>
+      <td>Check if this text should be marked up as a heading: Por eso, en UST, siempre:&nbsp;</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<p>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<button>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>The foreground text and its background color are both detected as #006e74. Verify the text meets the WCAG AA requirements for minimum contrast</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<button>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<button>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>The foreground text and its background color are both detected as #c2bcbe. Verify the text meets the WCAG AA requirements for minimum contrast</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<button>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<button>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>The foreground text and its background color are both detected as #c2bcbe. Verify the text meets the WCAG AA requirements for minimum contrast</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<button>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<button>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>The foreground text and its background color are both detected as #c2bcbe. Verify the text meets the WCAG AA requirements for minimum contrast</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<button>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a rel=&quot;&quot; target=&quot;_self&quot; href=&quot;/es/our-approach/innovation-ecosystem&quot; tabindex=&quot;0&quot; aria-label=&quot;Innovation Ecosystem&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-primary__10-OW cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a rel=&quot;&quot; target=&quot;_self&quot; href=&quot;/es/insights&quot; tabindex=&quot;0&quot; aria-label=&quot;Our Work&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-primary__10-OW cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>The foreground text and its background color are both detected as #ffffff. Verify the text meets the WCAG AA requirements for minimum contrast</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<div class=&quot;&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>The foreground text and its background color are both detected as #ffffff. Verify the text meets the WCAG AA requirements for minimum contrast</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<div class=&quot;&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>The foreground text and its background color are both detected as #ffffff. Verify the text meets the WCAG AA requirements for minimum contrast</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<div class=&quot;&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.3.3 Sensory Characteristics</td>
+      <td>If the word(s) 'right' is part of instructions for using page content, check it is still understandable without this location or shape information</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<h5 class=&quot;ust-heading_root__372Zh ust-heading_h5__2Mq2o ust-heading_alignment-left__1UUvl ust-projects-grid_heading__20JdL ust-heading_alignment-left__1UUvl&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1.4.3 Contrast (Minimum)</td>
+      <td>The foreground text and its background color are both detected as #ffffff. Verify the text meets the WCAG AA requirements for minimum contrast</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<div class=&quot;&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a rel=&quot;&quot; target=&quot;_self&quot; href=&quot;/es/industries/financial-services&quot; tabindex=&quot;0&quot; aria-label=&quot;Financial Services&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-secondary__1ZjTw cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a rel=&quot;&quot; target=&quot;_self&quot; href=&quot;/es/industries/healthcare&quot; tabindex=&quot;0&quot; aria-label=&quot;Healthcare&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-secondary__1ZjTw cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a rel=&quot;&quot; target=&quot;_self&quot; href=&quot;/es/industries/retail-and-cpg&quot; tabindex=&quot;0&quot; aria-label=&quot;Retail &amp; cpg&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-secondary__1ZjTw cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a rel=&quot;&quot; target=&quot;_self&quot; href=&quot;/es/industries/manufacturing&quot; tabindex=&quot;0&quot; aria-label=&quot;Manufacturing&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-secondary__1ZjTw cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a rel=&quot;&quot; target=&quot;_self&quot; href=&quot;/es/industries/technology-media-telecom&quot; tabindex=&quot;0&quot; aria-label=&quot;Technology, media &amp; telecom&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-secondary__1ZjTw cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<a rel=&quot;&quot; target=&quot;_self&quot; href=&quot;/es/industries/public-sector&quot; tabindex=&quot;0&quot; aria-label=&quot;Public sector&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-secondary__1ZjTw cta-base cta-base_theme--light__1RiJy ctn-light&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<button tabindex=&quot;0&quot; aria-label=&quot;Inscríbete&quot; class=&quot;cta-base_cta__WoA83 cta-base_cta-primary__10-OW cta-base cta-base_theme--light__1RiJy ctn-light cta-base_border__2vUmS&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>2.4.7 Focus Visible</td>
+      <td>Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'</td>
+      <td>Needs review</td>
+      <td>
+        <a href="<button class=&quot;ot-sdk-show-settings&quot; id=&quot;ot-sdk-btn&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>3.2.2 On Input</td>
+      <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+      <td>Recommendation</td>
+      <td>
+        <a href="<a rel=&quot;noopener noreferrer nofollow&quot; class=&quot;ust-footer_subscribe-tile-social-media-item__2aitW&quot; target=&quot;_blank&quot; aria-label=&quot;Facebook media link&quot; href=&quot;https://www.facebook.com/USTglobal/&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>3.2.2 On Input</td>
+      <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+      <td>Recommendation</td>
+      <td>
+        <a href="<a rel=&quot;noopener noreferrer nofollow&quot; class=&quot;ust-footer_subscribe-tile-social-media-item__2aitW&quot; target=&quot;_blank&quot; aria-label=&quot;Twitter media link&quot; href=&quot;https://twitter.com/USTspain&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>3.2.2 On Input</td>
+      <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+      <td>Recommendation</td>
+      <td>
+        <a href="<a class=&quot;ust-footer_subscribe-tile-social-media-item__2aitW&quot; target=&quot;_blank&quot; aria-label=&quot;Linkedin media link&quot; href=&quot;https://es.linkedin.com/company/ustespana&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>3.2.2 On Input</td>
+      <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+      <td>Recommendation</td>
+      <td>
+        <a href="<a rel=&quot;noopener noreferrer nofollow&quot; class=&quot;ust-footer_subscribe-tile-social-media-item__2aitW&quot; target=&quot;_blank&quot; aria-label=&quot;Instagram media link&quot; href=&quot;https://www.instagram.com/ust.global/&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>3.2.2 On Input</td>
+      <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+      <td>Recommendation</td>
+      <td>
+        <a href="<a rel=&quot;noopener noreferrer nofollow&quot; class=&quot;ust-footer_subscribe-tile-social-media-item__2aitW&quot; target=&quot;_blank&quot; aria-label=&quot;YouTube media link&quot; href=&quot;https://www.youtube.com/channel/UCXXo0NRg7KVWZI10d5uz1dg&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>3.2.2 On Input</td>
+      <td>Inform the user when their input action will open a new window or otherwise change their context</td>
+      <td>Recommendation</td>
+      <td>
+        <a href="<a rel=&quot;noopener noreferrer nofollow&quot; class=&quot;&quot; target=&quot;_blank&quot; aria-label=&quot;Encuentra oportunidades&quot; href=&quot;https://tcp.ofertas-trabajo.infojobs.net/ofertas?utm_source=Ofertas&amp;utm_medium=LandingCareers&amp;utm_campaign=Talento&quot;>" class="copy-to-clipboard">
+          <i class="far fa-copy text-black"></i> Copy to clipboard
+        </a>
+      </td>
+    </tr>
+
+      </tbody>
+    </table>
+          <!-- HASTA AQUÍ LA TABLA-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Agregar la referencia a Bootstrap JS (opcional) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.ajs"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="../javascript/individualreport.js"></script>
+</body>
+
+</html>
