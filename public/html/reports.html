@@ -67,18 +67,24 @@
             </div>
         </div>
     </div>
-      <script type="module">
+    <script type="module">
     import * as THREE from 'three';
-        import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+    import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 5;
 
-    // Inicializa el renderizador una sola vez
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.querySelector('.wrapper').appendChild(renderer.domElement); // Adjunta el renderer al div .wrapper
+    document.querySelector('.wrapper').appendChild(renderer.domElement);
+
+    const loader = new GLTFLoader();
+    loader.load('../javascript/caja-carton-A1.json', function(gltf) {
+        scene.add(gltf.scene);
+    }, undefined, function(error) {
+        console.error(error);
+    });
 
     const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
     scene.add(light);
@@ -90,6 +96,7 @@
 
     animate();
 </script>
+
 
     <!-- Agregar la referencia a Bootstrap JS (opcional) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
