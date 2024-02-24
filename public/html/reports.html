@@ -68,11 +68,25 @@
          const loader = new THREE.GLTFLoader();
 
 // Reemplaza 'path/to/your/model.json' con la ruta a tu modelo JSON
-loader.load('path/to/your/model.json', function(gltf) {
+loader.load('../javascript/caja-carton-A1.json', function(gltf) {
     scene.add(gltf.scene);
 }, undefined, function(error) {
     console.error(error);
 });
+
+const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
+scene.add(light);
+
+function animate() {
+    requestAnimationFrame(animate);
+    // Aquí puedes añadir cualquier animación o rotación a tu modelo o cámara
+    renderer.render(scene, camera);
+}
+
+animate();
+
+camera.position.z = 5;
+
 
       </script>
       <!-- Agregar la referencia a Bootstrap JS (opcional) -->
