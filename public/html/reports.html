@@ -67,35 +67,35 @@
             </div>
         </div>
     </div>
-    <script type="module">
-    import * as THREE from 'three';
-    import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+  <script type="module">
+        import * as THREE from 'three';
+        import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 5;
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 5;
 
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.querySelector('.wrapper').appendChild(renderer.domElement);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.querySelector('.wrapper').appendChild(renderer.domElement);
 
-    const loader = new GLTFLoader();
-    loader.load('../javascript/libro.glb', function(gltf) {
-        scene.add(gltf.scene);
-    }, undefined, function(error) {
-        console.error(error);
-    });
+        const loader = new GLTFLoader();
+        loader.load('../javascript/libro.glb', function(gltf) {
+            scene.add(gltf.scene);
+        }, undefined, function(error) {
+            console.error(error);
+        });
 
-    const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
-    scene.add(light);
+        const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
+        scene.add(light);
 
-    function animate() {
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-    }
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
 
-    animate();
-</script>
+        animate();
+    </script>
 
 
     <!-- Agregar la referencia a Bootstrap JS (opcional) -->
