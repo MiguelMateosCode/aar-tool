@@ -12,13 +12,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="../css/reports.css">
-      <script type="module">
-  import * as THREE from 'https://unpkg.com/three@latest/build/three.module.js';
-  import { GLTFLoader } from 'https://unpkg.com/three@latest/examples/jsm/loaders/GLTFLoader.js';
-
-  // Tu código aquí utilizando THREE y GLTFLoader
-</script>
-
    </head>
    <body>
 
@@ -71,31 +64,36 @@
             </div>
          </div>
       </div>
-      <script>
-         const loader = new THREE.GLTFLoader();
+<script type="module">
+  import * as THREE from 'https://unpkg.com/three@latest/build/three.module.js';
+  import { GLTFLoader } from 'https://unpkg.com/three@latest/examples/jsm/loaders/GLTFLoader.js';
 
-// Reemplaza 'path/to/your/model.json' con la ruta a tu modelo JSON
-loader.load('../javascript/caja-carton-A1.json', function(gltf) {
-    scene.add(gltf.scene);
-}, undefined, function(error) {
-    console.error(error);
-});
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 5;
 
-const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
-scene.add(light);
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
 
-function animate() {
-    requestAnimationFrame(animate);
-    // Aquí puedes añadir cualquier animación o rotación a tu modelo o cámara
-    renderer.render(scene, camera);
-}
+  const loader = new THREE.GLTFLoader();
+  loader.load('../javascript/caja-carton-A1.json', function(gltf) {
+      scene.add(gltf.scene);
+  }, undefined, function(error) {
+      console.error(error);
+  });
 
-animate();
+  const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
+  scene.add(light);
 
-camera.position.z = 5;
+  function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+  }
 
+  animate();
+</script>
 
-      </script>
       <!-- Agregar la referencia a Bootstrap JS (opcional) -->
       
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
