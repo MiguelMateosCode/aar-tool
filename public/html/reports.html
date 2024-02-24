@@ -80,7 +80,7 @@
     document.querySelector('.wrapper').appendChild(renderer.domElement);
 
     const loader = new GLTFLoader();
-    loader.load('../javascript/caja-carton-A1.json', function(gltf) {
+    loader.load('../javascript/prueba.glb', function(gltf) {
         scene.add(gltf.scene);
     }, undefined, function(error) {
         console.error(error);
