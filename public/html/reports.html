@@ -64,6 +64,17 @@
             </div>
          </div>
       </div>
+      <script>
+         const loader = new THREE.GLTFLoader();
+
+// Reemplaza 'path/to/your/model.json' con la ruta a tu modelo JSON
+loader.load('path/to/your/model.json', function(gltf) {
+    scene.add(gltf.scene);
+}, undefined, function(error) {
+    console.error(error);
+});
+
+      </script>
       <!-- Agregar la referencia a Bootstrap JS (opcional) -->
       <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
