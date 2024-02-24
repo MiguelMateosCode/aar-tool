@@ -74,12 +74,9 @@
         document.body.appendChild(renderer.domElement);
 
         // Se carga el modelo GLTF
-        const loader = new THREE.GLTFLoader();
-        loader.load('../javascript/caja-carton-A1.json', function(gltf) {
-            scene.add(gltf.scene);
-        }, undefined, function(error) {
-            console.error(error);
-        });
+       const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.querySelector('.wrapper').appendChild(renderer.domElement);
 
         // Se añade luz a la escena
         const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
