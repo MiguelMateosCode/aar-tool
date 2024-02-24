@@ -1,105 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>UST | Accesibility Report Tool</title>
-      <!-- Agregar la referencia a Bootstrap CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <!-- Agregar la referencia a Font Awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="../css/reports.css">
-   </head>
-   <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UST | Accessibility Report Tool</title>
+    <!-- Agregar la referencia a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Agregar la referencia a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reports.css">
+    <script type="module">
+        import * as THREE from 'https://unpkg.com/three@latest/build/three.module.js';
+        import { GLTFLoader } from 'https://unpkg.com/three@latest/examples/jsm/loaders/GLTFLoader.js';
 
+        // Se inicializa la escena, la cámara y el renderizador
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 5;
 
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
 
-      <!-- Contenedor en el centro con medida de 6 columnas -->
-      <div class="container mt-5 mb-5">
-         <div class="row justify-content-center">
+        // Se carga el modelo GLTF
+        const loader = new THREE.GLTFLoader();
+        loader.load('../javascript/caja-carton-A1.json', function(gltf) {
+            scene.add(gltf.scene);
+        }, undefined, function(error) {
+            console.error(error);
+        });
+
+        // Se añade luz a la escena
+        const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
+        scene.add(light);
+
+        // Función de animación para renderizar la escena y la cámara
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
             <div class="col-md-12">
-               <img src="https://i.imgur.com/VCVcNoz.png" alt="">
-               <div class="separator"></div>
-               <h1>Accesibility Report Index</h1>
- <h2>All reports</h2>
-              <div class="wrapper">
-                <!-- Agregar el buscador -->
-              <label for="client">Search name</label>
-               <input type="text" id="searchInput" class="form-control mb-3">
-
-               <table class="table">
-                  <thead>
-                     <tr class="table-header">
-                        <th><button class="btn btn-link table-header-btn" onclick="sortTable(0)">Created on <i class="fas fa-sort"></i></button></th>
-                        <th>Name</th>
-                        <th>Issues</th>
-                        <th>Client</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr onclick="window.location.href='individualreport.html';">
-                        <td>16/03/2024</td>
-                        <td>Empresa de Soluciones de Transformación Digital | UST España</td>
-                        <td>70</td>
-                        <td>UST</td>
-                     </tr>
- <tr onclick="window.location.href='quehacemos.html';">
-                        <td>12/03/2024</td>
-                        <td>Qué hacemos | UST España</td>
-                        <td>69</td>
-                        <td>UST</td>
-                     </tr>
-                      <tr onclick="window.location.href='nuestravision.html';">
-                        <td>13/03/2024</td>
-                        <td>Nuestro enfoque | Haz que tu viaje sea nuestro viaje - UST Spain</td>
-                        <td>65</td>
-                        <td>UST</td>
-                     </tr>
-                  </tbody>
-               </table>
-              </div>
+                <img src="https://i.imgur.com/VCVcNoz.png" alt="">
+                <div class="separator"></div>
+                <h1>Accessibility Report Index</h1>
+                <h2>All reports</h2>
+                <div class="wrapper">
+                    <label for="client">Search name</label>
+                    <input type="text" id="searchInput" class="form-control mb-3">
+                    <table class="table">
+                        <thead>
+                            <tr class="table-header">
+                                <th><button class="btn btn-link table-header-btn" onclick="sortTable(0)">Created on <i class="fas fa-sort"></i></button></th>
+                                <th>Name</th>
+                                <th>Issues</th>
+                                <th>Client</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="window.location.href='individualreport.html';">
+                                <td>16/03/2024</td>
+                                <td>Empresa de Soluciones de Transformación Digital | UST España</td>
+                                <td>70</td>
+                                <td>UST</td>
+                            </tr>
+                            <tr onclick="window.location.href='quehacemos.html';">
+                                <td>12/03/2024</td>
+                                <td>Qué hacemos | UST España</td>
+                                <td>69</td>
+                                <td>UST</td>
+                            </tr>
+                            <tr onclick="window.location.href='nuestravision.html';">
+                                <td>13/03/2024</td>
+                                <td>Nuestro enfoque | Haz que tu viaje sea nuestro viaje - UST Spain</td>
+                                <td>65</td>
+                                <td>UST</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-         </div>
-      </div>
-<script type="module">
-  import * as THREE from 'https://unpkg.com/three@latest/build/three.module.js';
-  import { GLTFLoader } from 'https://unpkg.com/three@latest/examples/jsm/loaders/GLTFLoader.js';
-
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.z = 5;
-
-  const renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
-
-  const loader = new THREE.GLTFLoader();
-  loader.load('../javascript/caja-carton-A1.json', function(gltf) {
-      scene.add(gltf.scene);
-  }, undefined, function(error) {
-      console.error(error);
-  });
-
-  const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
-  scene.add(light);
-
-  function animate() {
-      requestAnimationFrame(animate);
-      renderer.render(scene, camera);
-  }
-
-  animate();
-</script>
-
-      <!-- Agregar la referencia a Bootstrap JS (opcional) -->
-      
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <script src="../javascript/reports.js"></script>
-      
-   </body>
+        </div>
+    </div>
+    <!-- Agregar la referencia a Bootstrap JS (opcional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../javascript/reports.js"></script>
+</body>
 </html>
